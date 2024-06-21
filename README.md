@@ -18,6 +18,31 @@ Número mínimo de cortes: 3
     - Identifica todos os palíndromos na string e remove os subpalíndromos redundantes.
 
 ## Como Compilar e Executar
-1. Salve o código em um arquivo, por exemplo, `extraipalindromos.c`.
-2. Abra um terminal e navegue até o diretório contendo o arquivo.
-3. Compile o programa usando um compilador C.
+
+No VSCode ou CodeBlocks
+
+1. Baixe e instale um compilador C:
+
+VSCode: Utilize a extensão C/C++ da Microsoft ou configure manualmente com o MinGW ou GCC.
+CodeBlocks: Baixe e instale o CodeBlocks, que já inclui o compilador GCC.
+
+2. Salve o código em um arquivo, por exemplo, `extraipalindromos.c`.
+
+3. Compile o programa
+
+No VSCode (com GCC):
+Abra um terminal integrado (Ctrl + `) e compile com o GCC ut
+    gcc -o palindrome_partition palindrome_partition.c      
+
+No CodeBlocks:
+    Abra o projeto `extraipalindromos.c` no CodeBlocks e 
+
+4. Execute o programa
+
+Após compilar com sucesso, execute o programa:
+
+No VSCode, utilize o comando em seu terminal:
+    ./palindrome_partition
+
+No CodeBlocks:
+    Execute o projeto diretamente no ambiente do CodeBlocks.

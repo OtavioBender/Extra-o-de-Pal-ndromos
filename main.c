@@ -35,6 +35,7 @@ void achar_todos_palindromos(char *str, int tamanho) {
     int Tamanho = strlen(str);
     int pos[2][30];
     int i = 0;
+    //identificar palintromos
     for (int start = 0; start < Tamanho; start++) {
         for (int end = start; end < Tamanho; end++) {
             if (EhPalindromo(str, start, end) && (end - start + 1 > 1)) {
