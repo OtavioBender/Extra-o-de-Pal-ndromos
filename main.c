@@ -72,7 +72,7 @@ void achar_todos_palindromos(char *str, int tamanho) {
         pos[0][new_i +1] = -1; // adicionado mais uma linha para não imprimir o ultimo | no final da string
         pos[1][new_i +1] = -1; // adicionado mais uma linha para não imprimir o ultimo | no final da string
         i = new_i;
-        printf("o numero de cortes minimos necessarios: %d\n", i);
+        //printf("o numero de cortes minimos necessarios: %d\n", i);
         for (int l = 0; l < i - 1; l++) { // ordenando a matriz
             for (int j = l + 1; j < i; j++) {
                 if (pos[0][l] > pos[0][j]) {
@@ -89,24 +89,29 @@ void achar_todos_palindromos(char *str, int tamanho) {
         int n=0;
         int posiin=0;
         int posifin=0;
+        int cont=0;
         while(n < tamanho){ //imprimindo com | nas posições indicadas que está cada palindromo no codigo. presente na matriz.
-            if((pos[0][posiin]==n) && (pos[0][posiin]!=0)){
+            if(pos[0][posiin]==n & pos[0][posiin]!=0){
                 printf(" | %c", str[n]);
+                cont++;
                 posiin++;
             }else if(pos[0][posiin]==0){
                 printf("%c", str[n]);
                 posiin++;
-            }else if((pos[1][posifin] == n) && (pos[1][posifin +1] != -1) && ((pos[1][posifin] - pos[0][posiin]) != -1)){
+            }else if(pos[1][posifin] == n & pos[1][posifin +1] != -1 & ((pos[1][posifin] - pos[0][posiin]) != -1)){
                 printf("%c | ", str[n]);
+                cont++;
                 posifin++;
             }else if ((pos[1][posifin] - pos[0][posiin]) == -1){
-                    printf("%c", str[n]);
-                    posifin++;
+                     printf("%c", str[n]);
+                     posifin++;
                 }else{
                 printf("%c", str[n]);
             }
             n++;
         }
+        printf("\n");
+        printf("o numero de cortes minimos necessarios: %d\n", cont);
 }
 
 int main() {

@@ -4,7 +4,7 @@ Este programa em C utiliza o metodo guloso para identificar e ordenar todos os p
 
 ## Exemplo
 Para a string de entrada `bcdddaaadddadabba`, o programa deve produzir:
-Palíndromos: b | c | dddaaaddd | ada | bb | a
+Palíndromos: bc | dddaaaddd | ad | abba
 Número mínimo de cortes: 3
 
 ## Como Funciona
@@ -46,3 +46,7 @@ No VSCode, utilize o comando em seu terminal:
 
 No CodeBlocks:
     Execute o projeto diretamente no ambiente do CodeBlocks.
+
+5. Informe a string desejada
+
+Após execução do programa informe a string que deseja realizar a verificação, o arquivo `input.txt` possui exemplos de entrada caso necessário 
